@@ -33,9 +33,8 @@ public class HomePageTest extends BaseTest{
         HomePage homePage =new HomePage();
         homePage.open();
         HomeSlider homeSlider = homePage.homeSlider();
-//        should be visible
-//        size slider
-//
+//     TODO   should be isImage
+//     TODO   size slider = 3
 
 
     }
