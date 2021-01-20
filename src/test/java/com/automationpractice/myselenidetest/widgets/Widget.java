@@ -5,7 +5,7 @@ import io.qameta.allure.Step;
 
 public class Widget {
 
-    private final SelenideElement container;
+    protected final SelenideElement container;
 
     public Widget(SelenideElement container){
         this.container = container;

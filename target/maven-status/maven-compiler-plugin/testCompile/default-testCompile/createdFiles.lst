@@ -1,0 +1,7 @@
+com/automationpractice/myselenidetest/config/BaseTest.class
+com/automationpractice/myselenidetest/HomePageTest.class
+com/automationpractice/myselenidetest/widgets/ProductList.class
+com/automationpractice/myselenidetest/widgets/Widget.class
+com/automationpractice/myselenidetest/pages/HomePage.class
+com/automationpractice/myselenidetest/widgets/LinkButton.class
+com/automationpractice/myselenidetest/widgets/homepage/CenterWidget.class

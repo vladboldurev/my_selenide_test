@@ -1,5 +1,6 @@
 package com.automationpractice.myselenidetest.pages;
 
+import com.automationpractice.myselenidetest.widgets.homepage.HomeSlider;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -13,8 +14,10 @@ import com.automationpractice.myselenidetest.widgets.LinkButton;
 public class HomePage {
 
     private final static SelenideElement centerColumn = $("#center_column");
-    private final static SelenideElement homePagePopularTab = $("#home-page-tabs").find(byText("Popular"));
-    private final static SelenideElement homePageBestSellersTab = $("#home-page-tabs").find(byText("Best Sellers"));
+    private final static SelenideElement homePagePopularTab =
+            $("#home-page-tabs").find(byText("Popular")).parent();
+    private final static SelenideElement homePageBestSellersTab =
+            $("#home-page-tabs").find(byText("Best Sellers")).parent();
 
     @Step
     public void open(){
@@ -22,19 +25,21 @@ public class HomePage {
     }
 
     @Step
-    public ProductList popularTabClick(){
+    public void popularTabClick(){
         popularTab().click();
-        return productList();
     }
 
     @Step
-    public ProductList bestSellersTabClick(){
-        popularTab().click();
-        return productList();
+    public void bestSellersTabClick(){
+        bestSellersTab().click();
     }
 
     public ProductList productList(){
         return new ProductList(centerColumn);
+    }
+
+    public HomeSlider homeSlider(){
+        return new HomeSlider();
     }
 
     public LinkButton popularTab(){
