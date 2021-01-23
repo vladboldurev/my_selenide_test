@@ -4,7 +4,7 @@ import com.codeborne.selenide.Configuration;
 
 public class BaseTest {
     {
-        Configuration.fastSetValue = false;
+        Configuration.fastSetValue = true;
         Configuration.baseUrl = "http://automationpractice.com/index.php";
     }
 }

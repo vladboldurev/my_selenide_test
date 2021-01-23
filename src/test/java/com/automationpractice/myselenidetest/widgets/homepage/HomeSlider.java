@@ -1,21 +1,17 @@
 package com.automationpractice.myselenidetest.widgets.homepage;
 
-import com.automationpractice.myselenidetest.widgets.Widget;
+import com.automationpractice.myselenidetest.widgets.elements.Element;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import io.qameta.allure.Step;
-import java.io.ByteArrayOutputStream;
-import java.util.HashMap;
 
 import static  com.codeborne.selenide.Selenide.$;
 
 
-public class HomeSlider extends Widget{
+public class HomeSlider{
 
-    public HomeSlider(){
-        super($("#homeslider"));
-    }
+    private static final SelenideElement container = $("#homeslider");
 
     @Step
     public void prevTabClick(){
@@ -41,7 +37,7 @@ public class HomeSlider extends Widget{
     public void shouldHaveIsImage(){
         ElementsCollection sliderImages = this.sliderImages();
         for(int i=0; i < sliderImages.size(); i++){
-//            sliderImages[i].find(By.cssSelector("img")).isImage();
+            sliderImages.get(i).find(By.cssSelector("img")).isImage();
         }
     }
 

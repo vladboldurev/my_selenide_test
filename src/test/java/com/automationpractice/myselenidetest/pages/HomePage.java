@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 import com.automationpractice.myselenidetest.widgets.ProductList;
-import com.automationpractice.myselenidetest.widgets.LinkButton;
+import com.automationpractice.myselenidetest.widgets.elements.LinkElement;
 
 public class HomePage {
 
@@ -42,12 +42,12 @@ public class HomePage {
         return new HomeSlider();
     }
 
-    public LinkButton popularTab(){
-        return new LinkButton(homePagePopularTab);
+    public LinkElement popularTab(){
+        return new LinkElement(homePagePopularTab);
     }
 
-    public LinkButton bestSellersTab(){
-        return new LinkButton(homePageBestSellersTab);
+    public LinkElement bestSellersTab(){
+        return new LinkElement(homePageBestSellersTab);
     }
 
 
