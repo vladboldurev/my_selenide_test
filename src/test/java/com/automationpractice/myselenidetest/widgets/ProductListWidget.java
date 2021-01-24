@@ -9,20 +9,21 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byCssSelector;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class ProductList {
+public class ProductListWidget extends AbstractWidget {
 
-    private SelenideElement container;
+    private final By PRODUCT_LIST = byCssSelector(".product_list");
+    private final By PRODUCT_ELEMENTS = byCssSelector(".ajax_block_product");
 
-    public ProductList(SelenideElement container){
-        this.container = container;
+    public ProductListWidget(SelenideElement rootElement){
+        setRootElement(rootElement);
     }
 
     public SelenideElement element(){
-        return this.container.findAll(byCssSelector(".product_list")).findBy(visible);
+        return getRootElement().findAll(PRODUCT_LIST).findBy(visible);
     }
 
     public ElementsCollection productElements(){
-        return element().findAll(By.cssSelector(".ajax_block_product"));
+        return element().findAll(PRODUCT_ELEMENTS);
     }
 
     @Step
