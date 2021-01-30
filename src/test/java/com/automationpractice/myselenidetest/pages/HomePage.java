@@ -1,6 +1,6 @@
 package com.automationpractice.myselenidetest.pages;
 
-import com.automationpractice.myselenidetest.widgets.homepage.HomeSlider;
+import com.automationpractice.myselenidetest.widgets.HomeSliderWidget;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -8,7 +8,7 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-import com.automationpractice.myselenidetest.widgets.ProductList;
+import com.automationpractice.myselenidetest.widgets.ProductListWidget;
 import com.automationpractice.myselenidetest.widgets.elements.LinkElement;
 
 public class HomePage {
@@ -34,12 +34,12 @@ public class HomePage {
         bestSellersTab().click();
     }
 
-    public ProductList productList(){
-        return new ProductList(centerColumn);
+    public ProductListWidget productList(){
+        return new ProductListWidget(centerColumn);
     }
 
-    public HomeSlider homeSlider(){
-        return new HomeSlider();
+    public HomeSliderWidget homeSlider(){
+        return new HomeSliderWidget();
     }
 
     public LinkElement popularTab(){

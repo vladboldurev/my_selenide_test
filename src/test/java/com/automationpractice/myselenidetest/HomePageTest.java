@@ -2,10 +2,10 @@ package com.automationpractice.myselenidetest;
 
 import com.automationpractice.myselenidetest.config.BaseTest;
 import com.automationpractice.myselenidetest.pages.HomePage;
-import com.automationpractice.myselenidetest.widgets.ProductList;
+import com.automationpractice.myselenidetest.widgets.ProductListWidget;
 import org.junit.jupiter.api.Test;
 
-import com.automationpractice.myselenidetest.widgets.homepage.HomeSlider;
+import com.automationpractice.myselenidetest.widgets.HomeSliderWidget;
 
 
 public class HomePageTest extends BaseTest{
@@ -15,7 +15,7 @@ public class HomePageTest extends BaseTest{
         HomePage homePage =new HomePage();
         homePage.open();
         homePage.popularTabClick();
-        ProductList productList = homePage.productList();
+        ProductListWidget productList = homePage.productList();
         productList.shouldHaveProductsSize(7);
     }
 
@@ -24,7 +24,7 @@ public class HomePageTest extends BaseTest{
         HomePage homePage =new HomePage();
         homePage.open();
         homePage.bestSellersTabClick();
-        ProductList productList = homePage.productList();
+        ProductListWidget productList = homePage.productList();
         productList.shouldHaveProductsSize(7);
     }
 
@@ -32,7 +32,7 @@ public class HomePageTest extends BaseTest{
     public void checkSlider(){
         HomePage homePage =new HomePage();
         homePage.open();
-        HomeSlider homeSlider = homePage.homeSlider();
+        HomeSliderWidget homeSlider = homePage.homeSlider();
         homeSlider.shouldHaveIsImage();
         homeSlider.shouldHaveSize(3);
     }
