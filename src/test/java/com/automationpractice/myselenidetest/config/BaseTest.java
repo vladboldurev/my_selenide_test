@@ -8,15 +8,18 @@ public class BaseTest {
 
     @BeforeAll
     public static void setUp() {
-        Configuration.fastSetValue = true;
+//        Configuration.fastSetValue = true;
+//        Configuration.baseUrl = "http://automationpractice.com/index.php";
+//        Configuration.remote = "http://localhost:4444/wd/hub";
+//        Configuration.browser = "firefox";
+//        Configuration.browserSize = "1920x1080";
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("enableVNC", true);
+//        capabilities.setCapability("enableVideo", true);
+//        Configuration.browserCapabilities = capabilities;
+        Configuration.fastSetValue = false;
         Configuration.baseUrl = "http://automationpractice.com/index.php";
-        Configuration.remote = "http://localhost:4444/wd/hub";
-        Configuration.browser = "firefox";
-        Configuration.browserSize = "1920x1080";
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
+
     }
 
 }
